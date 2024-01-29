@@ -1,18 +1,38 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <template-page url="/http/url" :form="form">
+
+    </template-page>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import TemplatePage from "@/components/template-page/index.js";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld
+    TemplatePage,
+  },
+  data() {
+    return{
+      form: [{
+        type: 'input',
+        key: 'search',
+        label: '搜索',
+        value: '哈哈',
+        placeholder: '请输入搜索内容',
+        disabled: false
+      }]
+    }
   }
-}
+};
 </script>
+
+<style>
+.home{
+  padding: 20px;
+  height: 100%;
+}
+</style>
