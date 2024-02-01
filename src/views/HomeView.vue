@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <template-page :tableConfig="{
+    <miji-template-page :tableConfig="{
       title: '表格标题'
     }" :form="form" requestMethod="Get" :requestConfig="{
       url: '/http/url'
@@ -73,19 +73,14 @@
       <template slot="sex" slot-scope="scope">
         性别{{ scope.$index }}
       </template>
-    </template-page>
+    </miji-template-page>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import TemplatePage from "@/components/template-page/index.js";
 
 export default {
   name: "HomeView",
-  components: {
-    TemplatePage,
-  },
   data() {
     return {
       form: [{
