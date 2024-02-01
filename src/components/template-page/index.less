@@ -1,31 +1,55 @@
-.page{
+.page {
   width: 100%;
   height: 100%;
-  &-form{
+
+  &-form {
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;
     background: #ffffff;
     border-radius: 4px;
-    &__item{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      padding-left: 20px;
       display: flex;
 
-      &--input{
+      &--input {
         width: 300px;
       }
     }
   }
-  &-option{
+
+  &-option {
     margin-bottom: 10px;
     padding: 10px;
     width: 100%;
     background: #ffffff;
     border-radius: 4px;
+    text-align: right;
   }
-  &-container{
+
+  &-container {
     padding: 10px;
     width: 100%;
     background: #ffffff;
     border-radius: 4px;
   }
+
+  &-pagination {
+    padding: 0 20px;
+    text-align: right;
+    background: #ffffff;
+    &.fixed {
+      position: fixed;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+  }
+}
+
+.margin-left-100px {
+  margin-left: 100px;
 }
